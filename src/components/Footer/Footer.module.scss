@@ -1,0 +1,5 @@
+@use '@styles/settings/gutters';
+
+.Footer {
+  padding: gutters.$gutter;
+}
