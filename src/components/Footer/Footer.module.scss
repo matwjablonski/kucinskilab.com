@@ -1,5 +1,31 @@
 @use '@styles/settings/gutters';
+@use '@styles/settings/colors';
 
 .Footer {
+  bottom: 0;
+  left: 0;
+  margin-bottom: gutters.$gutter * 4;
   padding: gutters.$gutter;
+  position: fixed;
+  width: 100%;
+
+  .ContactData {
+    text-align: center;
+    padding-top: gutters.$gutter * 2;
+    margin-bottom: gutters.$gutter * 4;
+
+    strong {
+      text-transform: uppercase;
+    }
+  
+    p {
+      margin-bottom: gutters.$gutter-small;
+    }
+  }
+
+  .CopyData {
+    color: rgba(colors.$text-color, 0.7);
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }

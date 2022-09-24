@@ -1,4 +1,4 @@
-import '../styles/global.css'
+import '../styles/global.scss'
 import { IntlProvider } from 'react-intl'
 import en from '@lang/en.json';
 import { useRouter } from 'next/router';
