@@ -1,12 +1,26 @@
 @use '@styles/settings/gutters';
 @use '@styles/settings/colors';
+@use '@styles/settings/media';
 
 .Project {
   background-image: url('../../public/images/project.webp');
-  background-position: left;
+  background-position: center;
   background-size: cover;
   height: 100%;
   position: relative;
+  
+
+  @include media.bp(sm) {
+    background-position: -1100px;
+  }
+
+  @include media.bp(md) {
+    background-position: -250px;
+  }
+
+  @include media.bp(xl) {
+    background-position: left;
+  }
 
   .ProjectContent {
     align-items: flex-end;
@@ -23,6 +37,7 @@
     font-size: 2.5rem;
     margin-bottom: gutters.$gutter * 2;
     position: relative;
+    text-align: right;
     padding-bottom: gutters.$gutter * 2;
 
     &::after {
@@ -36,14 +51,22 @@
       bottom: 0;
       right: 0;
     }
+
+    @include media.bp(sm) {
+      font-size: 2.2rem;
+    }
   }
 
   .ProjectDescription {
     max-width: 600px;
     color: colors.$text-dark;
     line-height: 1.6;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: right;
     margin-bottom: gutters.$gutter * 2;
+
+    @include media.bp(sm) {
+      font-size: 1.2rem;
+    }
   }
 }
