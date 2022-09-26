@@ -1,0 +1,49 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.Project {
+  background-image: url('../../public/images/project.webp');
+  background-position: left;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+
+  .ProjectContent {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: gutters.$gutter * 2;
+    position: relative;
+  }
+
+  .ProjectTitle {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: gutters.$gutter * 2;
+    position: relative;
+    padding-bottom: gutters.$gutter * 2;
+
+    &::after {
+      background: colors.$primary-color;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: 0;
+      width: 70px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .ProjectDescription {
+    max-width: 600px;
+    color: colors.$text-dark;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-bottom: gutters.$gutter * 2;
+  }
+}
