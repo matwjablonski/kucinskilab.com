@@ -13,7 +13,7 @@ const MainLayout = ({ children, page }: MainLayoutProps) => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.page}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta

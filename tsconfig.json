@@ -25,6 +25,7 @@
       "@lang/*": ["lang/*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
+      "@public/*": ["public/*"],
     }
   },
   "include": [

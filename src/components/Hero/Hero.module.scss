@@ -1,0 +1,54 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.Hero {
+  background-image: url('../../public/images/hero.webp');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    background-color: rgba(colors.$white, 0.4);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .HeroContent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: gutters.$gutter * 2;
+    position: relative;
+  }
+
+  .HeroLogo {
+    margin-bottom: gutters.$gutter * 2;
+
+    &::after {
+      background: colors.$primary-color;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: (gutters.$gutter * 2) auto 0;
+      width: 70px;
+    }
+  }
+
+  .HeroDescription {
+    color: colors.$text-dark;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: gutters.$gutter * 2;
+    max-width: 700px;
+    text-align: center;
+    width: 100%;
+  }
+}

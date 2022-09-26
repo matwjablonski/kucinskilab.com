@@ -1,0 +1,34 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+@keyframes bump {
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ScrollDown {
+  animation: bump 2s infinite;
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: gutters.$gutter * 1.5;
+  width: 24px;
+  height: 24px;
+  z-index: 3;
+  margin: 0 auto;
+}

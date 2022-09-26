@@ -1,10 +1,12 @@
 @use '@styles/settings/colors';
+@use '@styles/settings/fonts';
 
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 html,
 body {
-  font-family: 'Aleo', serif;
+  font-family: fonts.$font-text;
   font-size: 16px;
   padding: 0;
   margin: 0;
