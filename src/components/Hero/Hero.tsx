@@ -10,7 +10,7 @@ const HeroComponent = ({}, ref) => (
     <div className={styles.Hero}>
       <div className={styles.HeroContent}>
         <div className={styles.HeroLogo}>
-          <Image src={Logo} />
+          <Image src={Logo} alt="Logotype of Kucinski Lab" />
         </div>
         <p className={styles.HeroDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, blanditiis sunt, est inventore ex minus rem expedita ipsa fugiat, suscipit perferendis exercitationem numquam nobis cupiditate quia.</p>
         <Button buttonType="link" to="/" label="Read more" />

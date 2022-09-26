@@ -1,0 +1,13 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: colors.$white;
+  padding: gutters.$gutter;
+}

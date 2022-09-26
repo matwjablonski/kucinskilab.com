@@ -3,6 +3,7 @@ import styles from './Main.module.scss'
 import { ReactNode } from 'react'
 import { useIntl } from 'react-intl';
 import Footer from '@components/Footer';
+import Header from '@components/Header';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -24,6 +25,7 @@ const MainLayout = ({ children, page }: MainLayoutProps) => {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{formatMessage({ id: `page.${page}.head.title`})} :: {formatMessage({ id: `page.${page}.head.subtitle`})}</title>
       </Head>
+      <Header />
       <main>{children}</main>
       <Footer />
     </div>
