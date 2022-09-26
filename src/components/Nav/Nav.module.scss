@@ -1,0 +1,41 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+@use '@styles/settings/fonts';
+
+.Nav {
+  .NavList {
+    display: flex;
+    list-style: none;
+  }
+
+  .NavItem {
+    margin: 0 gutters.$gutter;
+    font-family: fonts.$font-headline;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      transition: width 0.7s;
+      position: absolute;
+      bottom: -5px;
+      height: 1px;
+      background-color: colors.$primary-color;
+      left: 0;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: width 0.7s;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

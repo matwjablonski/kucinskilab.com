@@ -3,6 +3,7 @@ import Logo from '@public/images/logo.webp';
 import { memo } from "react";
 import styles from './Header.module.scss';
 import Link from "next/link";
+import Nav from "@components/Nav";
 
 const Header = memo(() => (
   <header className={styles.Header}>
@@ -11,6 +12,7 @@ const Header = memo(() => (
         <Image src={Logo} height={47} width={130} alt="Logotype of Kucinski Lab" />
       </a>
     </Link>
+    <Nav />
   </header>
 ));
 
