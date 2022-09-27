@@ -11,6 +11,7 @@ const News = ({ news }) => {
           <div className={styles.NewsItems}>
             {news.map(item => (
               <NewsItem
+                key={item.slug}
                 title={item.title}
                 date={item.publicationDate}
                 excerpt={item.excerpt}

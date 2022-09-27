@@ -5,7 +5,7 @@ import ScrollDown from '@components/ScrollDown';
 import Layout from '@layouts/Main'
 import { fetchEntries } from '../contentful';
 import { GetServerSideProps } from 'next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import News from '@components/News';
 import { formatDate } from '@utils/formatDate';
@@ -14,9 +14,9 @@ const Home = ({ data: { heroText, projectTitle, projectDescription, projectButto
   let scrollInProgress = false;
   let previousScrollPos = 0;
 
-  const intl = useIntl();
+  const [isScrollHidden, setIsScrollHidden] = useState(false);
 
-  console.log('news', news);
+  const intl = useIntl();
 
   const handleScroll = () => {
     const availableSections = 4;
@@ -26,6 +26,12 @@ const Home = ({ data: { heroText, projectTitle, projectDescription, projectButto
 
     if (window.innerWidth <= 1152) {
       return null;
+    }
+
+    if (scrollPos > ((availableSections - 1) * windowHeight)) {
+      setIsScrollHidden(true);
+    } else {
+      setIsScrollHidden(false);
     }
 
     const sectionIndex = Math.floor(scrollPos / windowHeight);
@@ -68,7 +74,7 @@ const Home = ({ data: { heroText, projectTitle, projectDescription, projectButto
       <ProjectSection title={projectTitle} text={projectDescription} label={projectButtonLabel} />
       <News news={news} />
       <AboutSection content={aboutText} />
-      <ScrollDown />
+      <ScrollDown isHidden={isScrollHidden} />
     </Layout>
   )
 }
