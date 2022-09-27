@@ -1,6 +1,11 @@
+@use '@styles/settings/media';
+
 .Section {
-  height: 100vh;
   position: relative;
   width: 100%;
   z-index: 1;
+
+  @include media.bp(lg) {
+    height: 100vh;
+  }
 }

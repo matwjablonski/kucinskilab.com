@@ -19,6 +19,10 @@ export default function Home({ allPostsData }) {
     const scrollPos = window.scrollY;
     const scrollPoint = window.innerHeight / 5;
 
+    if (window.innerWidth <= 1152) {
+      return null;
+    }
+
     const sectionIndex = Math.floor(scrollPos / windowHeight);
     const currentSectionScrollPos = Math.floor(scrollPos % windowHeight);
 
