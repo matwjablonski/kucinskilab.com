@@ -40,7 +40,7 @@ const Home = ({ data: { heroText, projectTitle, projectDescription, projectButto
     let nextSection = sectionIndex + 1;
 
     if (previousScrollPos > scrollPos) {
-      nextSection = sectionIndex - 1;
+      nextSection = sectionIndex;
     }
     
     if (currentSectionScrollPos > scrollPoint) {
