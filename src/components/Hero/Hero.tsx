@@ -5,14 +5,18 @@ import Logo from '@public/images/logo.webp';
 import Button from "@components/Button";
 import { forwardRef } from "react";
 
-const HeroComponent = ({}, ref) => (
+interface HeroProps {
+  text: string;
+}
+
+const HeroComponent = ({ text }: HeroProps, ref) => (
   <Section ref={ref}>
     <div className={styles.Hero}>
       <div className={styles.HeroContent}>
         <div className={styles.HeroLogo}>
           <Image src={Logo} alt="Logotype of Kucinski Lab" />
         </div>
-        <p className={styles.HeroDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, blanditiis sunt, est inventore ex minus rem expedita ipsa fugiat, suscipit perferendis exercitationem numquam nobis cupiditate quia.</p>
+        <p className={styles.HeroDescription}>{text}</p>
         <Button buttonType="link" to="/" label="Read more" />
       </div>
     </div>

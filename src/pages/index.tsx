@@ -3,11 +3,13 @@ import Hero from '@components/Hero';
 import ProjectSection from '@components/ProjectSection';
 import ScrollDown from '@components/ScrollDown';
 import Layout from '@layouts/Main'
-import { useEffect, useRef } from 'react';
+import { fetchEntries } from '../contentful';
+import { GetServerSideProps } from 'next';
+import { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 
 
-export default function Home({ allPostsData }) {
+const Home = ({ data: { heroText, projectTitle, projectDescription, projectButtonLabel, aboutText } }) => {
   let scrollInProgress = false;
   let previousScrollPos = 0;
 
@@ -59,18 +61,27 @@ export default function Home({ allPostsData }) {
 
   return (
     <Layout page="home">
-      <Hero />
-      <ProjectSection />
-      <AboutSection />
+      <Hero text={heroText} />
+      <ProjectSection title={projectTitle} text={projectDescription} label={projectButtonLabel} />
+      <AboutSection content={aboutText} />
       <ScrollDown />
     </Layout>
   )
 }
 
-export async function getStaticProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
+  const pageDataRes = await fetchEntries({
+    content_type: 'homePage',
+    include: 2,
+  });
+
+  const pageData = await pageDataRes.data.map(p => p.fields).shift();
+
   return {
     props: {
-      
+      data: pageData,
     }
   }
 }
+
+export default Home;

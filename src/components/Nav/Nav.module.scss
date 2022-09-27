@@ -1,11 +1,60 @@
 @use '@styles/settings/gutters';
 @use '@styles/settings/colors';
 @use '@styles/settings/fonts';
+@use '@styles/settings/media';
 
 .Nav {
-  .NavList {
+  .NavMobileBtn {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    @include media.bp(md) {
+      display: none;
+    }
+  }
+
+  .NavList {
     list-style: none;
+    display: none;
+
+    &.NavIsOpen {
+      display: flex;
+      position: fixed;
+      left: 0;
+      width: 100%;
+      background: colors.$light-gray;
+      flex-direction: column;
+      padding: gutters.$gutter * 2;
+      border-bottom: 1px solid colors.$text-color;
+
+      .NavItem {
+        margin: gutters.$gutter;
+        font-size: 1.2rem;
+      }
+
+      @include media.bp(md) {
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        left: unset;
+        border-bottom: 0;
+
+        .NavItem {
+          margin: 0 gutters.$gutter;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    @include media.bp(md) {
+      display: flex;
+    }
   }
 
   .NavItem {

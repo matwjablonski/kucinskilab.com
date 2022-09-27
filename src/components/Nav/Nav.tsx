@@ -1,10 +1,24 @@
+import Image from "next/image";
+import cx from 'classnames';
 import Link from "next/link";
+import AtomIcon from '@public/icons/atom.svg';
+import AtomActiveIcon from '@public/icons/atom-active.svg';
 import styles from './Nav.module.scss';
+import { useState } from "react";
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenMenu = () => {
+    setIsOpen(prevValue => !prevValue);
+  }
+
   return (
     <nav className={styles.Nav}>
-      <ul className={styles.NavList}>
+      <div className={styles.NavMobileBtn} onClick={handleOpenMenu}>
+        <Image src={isOpen ? AtomActiveIcon : AtomIcon} layout="fill" />
+      </div>
+      <ul className={cx(styles.NavList, isOpen && styles.NavIsOpen)}>
         <li className={styles.NavItem}>
           <Link href="/">
             <a>About me</a>
