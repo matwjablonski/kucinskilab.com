@@ -12,6 +12,8 @@
   color: colors.$primary-color;
   background-color: rgba(colors.$white, 0.2);
   transition: 0.7s;
+  letter-spacing: 1px;
+  display: inline-block;
 
   &:hover {
     background-color: rgba(colors.$primary-color, 0.7);

@@ -1,3 +1,4 @@
+import AboutSection from '@components/AboutSection';
 import Hero from '@components/Hero';
 import ProjectSection from '@components/ProjectSection';
 import ScrollDown from '@components/ScrollDown';
@@ -13,6 +14,7 @@ export default function Home({ allPostsData }) {
   const intl = useIntl();
 
   const handleScroll = () => {
+    const availableSections = 3;
     const windowHeight = window.innerHeight;
     const scrollPos = window.scrollY;
     const scrollPoint = window.innerHeight / 5;
@@ -27,7 +29,7 @@ export default function Home({ allPostsData }) {
     }
     
     if (currentSectionScrollPos > scrollPoint) {
-      if (!scrollInProgress && nextSection >= 0 && nextSection < 2) {
+      if (!scrollInProgress && nextSection >= 0 && nextSection < availableSections) {
         window.scroll({
           top: nextSection * windowHeight,
           left: 0,
@@ -55,6 +57,7 @@ export default function Home({ allPostsData }) {
     <Layout page="home">
       <Hero />
       <ProjectSection />
+      <AboutSection />
       <ScrollDown />
     </Layout>
   )
