@@ -1,0 +1,34 @@
+@use '@styles/settings/colors';
+@use '@styles/settings/gutters';
+@use '@styles/settings/media';
+
+.NewsItem {
+  background-color: rgba(colors.$white, 0.6);
+  flex: 1 0 calc(100% - (gutters.$gutter * 2));
+  max-width: calc(100% - (gutters.$gutter * 2));
+  padding: gutters.$gutter * 2;
+  margin: gutters.$gutter;
+
+  @include media.bp(sm) {
+    flex: 1 0 calc(50% - (gutters.$gutter * 2));
+    max-width: calc(50% - (gutters.$gutter * 2));
+  }
+
+  @include media.bp(xl) {
+    flex: 1 0 calc(33.3333% - (gutters.$gutter * 2));
+    max-width: calc(33.3333% - (gutters.$gutter * 2));
+  }
+
+  .NewsItemTitle {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: gutters.$gutter-small;
+  }
+
+  .NewsItemDate {
+    display: block;
+    font-size: 0.8rem;
+    color: colors.$text-color;
+    margin-bottom: gutters.$gutter;
+  }
+}

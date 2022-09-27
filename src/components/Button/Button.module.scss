@@ -21,4 +21,13 @@
     border-color: colors.$white;
     transition: 0.7s;
   }
+
+  &.isReversed {
+    background-color: rgba(colors.$white, 1);
+
+    &:hover {
+      background-color: rgba(colors.$primary-color, 1);
+      color: colors.$white;
+    }
+  }
 }

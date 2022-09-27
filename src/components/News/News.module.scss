@@ -1,0 +1,78 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+@use '@styles/settings/media';
+
+.News {
+  background-image: url('../../public/images/news.webp');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    background-color: rgba(colors.$secondary-color, 0.7);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .NewsContent {
+    display: flex;
+    height: 100%;
+    padding: (gutters.$gutter * 3) (gutters.$gutter * 2) (gutters.$gutter * 4);
+    position: relative;
+    flex-direction: column;
+
+    @include media.bp(lg) {
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .NewsItems {
+    display: flex;
+    order: 2;
+    flex-wrap: wrap;
+    margin-left: -(gutters.$gutter);
+    margin-right: -(gutters.$gutter);
+
+    @include media.bp(lg) {
+      flex: 7;
+      order: 1;
+      height: 70%;
+      padding-right: gutters.$gutter * 4;
+    }
+  }
+
+  .NewsMeta {
+    order: 1;
+    margin-bottom: gutters.$gutter * 2;
+
+    @include media.bp(lg) {
+      flex: 3;
+      order: 2;
+      margin-bottom: 0;
+    }
+  }
+
+  .NewsMetaTitle {
+    text-transform: uppercase;
+    color: colors.$white;
+    font-size: 3.5rem;
+    margin-bottom: gutters.$gutter * 2;
+
+    &::after {
+      background: colors.$white;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: (gutters.$gutter * 2) 0 0;
+      width: 70px;
+    }
+  }
+}

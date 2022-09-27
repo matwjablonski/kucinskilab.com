@@ -7,16 +7,19 @@ import { fetchEntries } from '../contentful';
 import { GetServerSideProps } from 'next';
 import { useEffect } from 'react';
 import { useIntl } from 'react-intl';
+import News from '@components/News';
+import { formatDate } from '@utils/formatDate';
 
-
-const Home = ({ data: { heroText, projectTitle, projectDescription, projectButtonLabel, aboutText } }) => {
+const Home = ({ data: { heroText, projectTitle, projectDescription, projectButtonLabel, aboutText }, news }) => {
   let scrollInProgress = false;
   let previousScrollPos = 0;
 
   const intl = useIntl();
 
+  console.log('news', news);
+
   const handleScroll = () => {
-    const availableSections = 3;
+    const availableSections = 4;
     const windowHeight = window.innerHeight;
     const scrollPos = window.scrollY;
     const scrollPoint = window.innerHeight / 5;
@@ -63,6 +66,7 @@ const Home = ({ data: { heroText, projectTitle, projectDescription, projectButto
     <Layout page="home">
       <Hero text={heroText} />
       <ProjectSection title={projectTitle} text={projectDescription} label={projectButtonLabel} />
+      <News news={news} />
       <AboutSection content={aboutText} />
       <ScrollDown />
     </Layout>
@@ -75,11 +79,28 @@ export const getServerSideProps: GetServerSideProps = async () => {
     include: 2,
   });
 
+  const newsRes = await fetchEntries({
+    content_type: 'news',
+    include: 2,
+    limit: 6,
+    order: '-fields.publicationDate',
+    'fields.publicationDate[lte]': new Date(),
+  });
+
   const pageData = await pageDataRes.data.map(p => p.fields).shift();
+
+  const news = await newsRes.data.map(p => ({
+    ...p.fields,
+    createdDate: formatDate({
+      dateObject: p.fields?.createdDate,
+      formatString: 'dd MMMM yyyy'
+    })
+  }));
 
   return {
     props: {
       data: pageData,
+      news,
     }
   }
 }
