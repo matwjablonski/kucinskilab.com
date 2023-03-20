@@ -22,7 +22,7 @@ const AboutSection = ({ content }: AboutProps) => (
             </div>
             <article className={styles.AboutText}>
               {documentToReactComponents(content, {})}
-              <Button label="Read more" buttonType="link" to="/"/>
+              <Button label="Read more" buttonType="link" to="/about"/>
             </article>
           </div>
         </div>

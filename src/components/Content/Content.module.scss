@@ -1,0 +1,26 @@
+@use '@styles/settings/fonts';
+@use '@styles/settings/gutters';
+
+.Content {
+  padding: gutters.$gutter-big;
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .Title {
+    font-size: 2em;
+    line-height: 1.7;
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+
+  .p {
+    line-height: 1.6;
+    font-size: 1.2em;
+    font-family: fonts.$font-text;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: gutters.$gutter-big;
+    }
+  }
+}

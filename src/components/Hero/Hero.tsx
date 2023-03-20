@@ -17,7 +17,7 @@ const HeroComponent = ({ text }: HeroProps, ref) => (
           <Image src={Logo} alt="Logotype of Kucinski Lab" />
         </div>
         <p className={styles.HeroDescription}>{text}</p>
-        <Button buttonType="link" to="/" label="Read more" />
+        <Button buttonType="link" to="/about" label="Read more" />
       </div>
     </div>
   </Section>

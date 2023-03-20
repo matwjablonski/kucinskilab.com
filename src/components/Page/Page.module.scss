@@ -1,0 +1,8 @@
+@use '@styles/settings/colors';
+@use '@styles/settings/gutters';
+
+.Page {
+  background-color: colors.$white;
+  height: 100%;
+  padding-bottom: gutters.$gutter-big * 4;
+}

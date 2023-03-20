@@ -5,7 +5,17 @@
   width: 100%;
   z-index: 1;
 
+  &.SectionWithTop {
+    padding-top: 84px;
+  }
+
   @include media.bp(lg) {
     height: 100vh;
+  }
+
+  &.SectionFullHeight {
+    @include media.bp(lg) {
+      height: auto;
+    }
   }
 }
