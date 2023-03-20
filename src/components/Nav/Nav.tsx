@@ -20,7 +20,7 @@ const Nav = () => {
       </div>
       <ul className={cx(styles.NavList, isOpen && styles.NavIsOpen)}>
         <li className={styles.NavItem}>
-          <Link href="/">
+          <Link href="/about">
             <a>About me</a>
           </Link>
         </li>
