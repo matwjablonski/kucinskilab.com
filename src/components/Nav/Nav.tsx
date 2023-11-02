@@ -35,12 +35,12 @@ const Nav = () => {
           </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link href="/">
+          <Link href="/news">
             <a>News</a>
           </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link href="/">
+          <Link href="/team">
             <a>Team</a>
           </Link>
         </li>

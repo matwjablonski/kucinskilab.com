@@ -1,0 +1,12 @@
+@use '@styles/settings/fonts';
+@use '@styles/settings/gutters';
+
+.Page {
+  padding: gutters.$gutter-big;
+
+  .Title {
+    font-size: 2em;
+    line-height: 1.7;
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+}

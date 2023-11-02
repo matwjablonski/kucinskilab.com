@@ -1,0 +1,30 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/fonts';
+@use '@styles/settings/colors';
+
+.TeamMember {
+  display: flex;
+  margin-bottom: gutters.$gutter-big;
+
+  .Image {
+    width: 300px;
+    min-width: 300px;
+    height: 500px;
+    position: relative;
+    margin-right: gutters.$gutter-big;
+    
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .Name {
+    font-size: 30px;
+  }
+
+  .p {
+    line-height: 1.6;
+    color: colors.$text-color;
+    max-width: 500px;
+  }
+}

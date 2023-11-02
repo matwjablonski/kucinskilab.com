@@ -3,15 +3,15 @@ import Page from '@components/Page';
 import { GetServerSideProps } from 'next';
 import { fetchEntries } from '../contentful';
 import Container from '@components/Container';
-import AboutHero from '@components/AboutHero';
+import AboutHero from '@components/PageHero';
 import Content from '@components/Content';
-
+import KImage from '@public/images/krzysztof.webp';
 
 const AboutPage = ({ data }) => {
   return (
     <Layout page="about">
       <Page>
-        <AboutHero />
+        <AboutHero image={KImage} />
         <Container>
           <Content title={data.title} content={data.about} />
         </Container>

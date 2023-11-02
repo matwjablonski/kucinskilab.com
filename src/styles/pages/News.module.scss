@@ -1,0 +1,21 @@
+@use '@styles/settings/fonts';
+@use '@styles/settings/gutters';
+
+.Page {
+  padding: gutters.$gutter-big;
+  display: flex;
+
+  .Content {
+    flex: 2 0 66.666%;
+  }
+
+  .Twitter {
+    flex: 1 0 33.333%;
+  }
+
+  .Title {
+    font-size: 2em;
+    line-height: 1.7;
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+}
