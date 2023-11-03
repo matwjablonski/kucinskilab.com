@@ -1,0 +1,23 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.Publications {
+  padding: gutters.$gutter-big;
+
+  .Title {
+    font-size: 2em;
+    line-height: 1.7;
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+
+  .YearSection {
+    margin-bottom: gutters.$gutter-big;
+  }
+
+  .Year {
+    color: colors.$secondary-color;
+    border-bottom: 2px solid colors.$secondary-color;
+    font-size: 1.5rem;
+    margin-bottom: gutters.$gutter-big;
+  }
+}

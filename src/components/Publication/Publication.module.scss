@@ -1,0 +1,57 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+@use '@styles/settings/media';
+
+.Publication {
+  display: flex;
+  margin-bottom: gutters.$gutter-big;
+  padding-bottom: gutters.$gutter-big;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid colors.$text-light;
+  }
+
+  .Logo {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+    position: relative;
+    margin-right: gutters.$gutter-big;
+    display: none;
+
+    @include media.bp(md) {
+      display: block;
+    }
+    
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .Authors {
+    color: colors.$text-light;
+    font-size: 1rem;
+    margin-bottom: gutters.$gutter-small;
+  }
+
+  .Title {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin: 0 0 gutters.$gutter-big;
+    color: colors.$text-dark;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-between;
+  }
+
+  .Meta {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: gutters.$gutter-small;
+  }
+}

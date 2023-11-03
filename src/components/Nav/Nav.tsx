@@ -30,7 +30,7 @@ const Nav = () => {
           </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link href="/">
+          <Link href="/publications">
             <a>Publications</a>
           </Link>
         </li>

@@ -7,7 +7,7 @@ import Header from '@components/Header';
 
 interface MainLayoutProps {
   children: ReactNode;
-  page: 'home' | 'about' | 'team' | 'news';
+  page: 'home' | 'about' | 'team' | 'news' | 'publications';
 }
 
 const MainLayout = ({ children, page }: MainLayoutProps) => {
