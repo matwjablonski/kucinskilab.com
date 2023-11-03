@@ -1,5 +1,29 @@
 {
   "page.home.head.title": "Krzysztof Kuciński Lab",
   "page.home.head.subtitle": "Welcome in our lab",
-  "page.home.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem."
+  "page.home.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+
+  "page.about.head.title": "About",
+  "page.about.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.about.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+
+  "page.team.head.title": "My Team",
+  "page.team.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.team.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+
+  "page.news.head.title": "News",
+  "page.news.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.news.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+
+  "page.publications.head.title": "Publications",
+  "page.publications.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.publications.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+
+  "page.sonata.head.title": "Sonata Project",
+  "page.sonata.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.sonata.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem.",
+  
+  "page.collaboration.head.title": "Collaboration",
+  "page.collaboration.head.subtitle": "Krzysztof Kuciński Lab",
+  "page.collaboration.head.description": "Lorem ipsum dolor sinet legem. Lorem ipsum dolor sinet legem."
 }
