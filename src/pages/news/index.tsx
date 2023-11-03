@@ -7,9 +7,10 @@ import LabImage from '@public/images/lab.webp';
 import styles from '@styles/pages/News.module.scss'
 import { fetchEntries } from '../../contentful';
 import { GetServerSideProps } from 'next';
+import SingleNews from '@components/SingleNews';
+import Link from 'next/link';
 
 const News = ({ data }) => {
-  console.log(data);
   return (
     <Layout page="news">
       <Page>
@@ -19,7 +20,9 @@ const News = ({ data }) => {
             <div className={styles.Content}>
               <h2 className={styles.Title}>News</h2>
               <div>
-                {/* {data.map()} */}
+                {data.map(article => (
+                  <SingleNews key={article.title} {...article} />
+                ))}
               </div>
             </div>
             <div className={styles.Twitter}>

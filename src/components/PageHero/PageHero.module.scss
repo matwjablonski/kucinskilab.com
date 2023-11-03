@@ -1,5 +1,17 @@
+@use "@styles/settings/media";
+
 .PageHero {
   position: relative;
-  height: 45vh;
-  min-height: 450px;
+  height: 15vh;
+  min-height: 150px;
+
+  @include media.bp(md) {
+    height: 25vh;
+    min-height: 250px;
+  }
+
+  @include media.bp(lg) {
+    height: 45vh;
+    min-height: 450px;
+  }
 }

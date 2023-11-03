@@ -1,0 +1,27 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.SingleNews {
+  margin-right: gutters.$gutter-big;
+  margin-bottom: gutters.$gutter-big;
+  padding-bottom: gutters.$gutter-big;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(colors.$text-color, 0.2);
+  }
+
+  .Title {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .Date {
+    margin-bottom: gutters.$gutter;
+    color: rgba(colors.$text-color, 0.6);
+  }
+
+  .Text {
+    line-height: 1.5;
+    margin-bottom: gutters.$gutter-big;
+  }
+}

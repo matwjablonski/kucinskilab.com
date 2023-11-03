@@ -1,5 +1,6 @@
 @use '@styles/settings/fonts';
 @use '@styles/settings/gutters';
+@use '@styles/settings/colors';
 
 .Content {
   padding: gutters.$gutter-big;
@@ -7,10 +8,19 @@
   max-width: 600px;
   margin: 0 auto;
 
+  .TitleBox {
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+
   .Title {
     font-size: 2em;
     line-height: 1.7;
-    margin-bottom: gutters.$gutter-big * 2;
+    margin-bottom: 0;
+  }
+
+  .Date {
+    color: colors.$text-light;
+    line-height: 0;
   }
 
   .p {
