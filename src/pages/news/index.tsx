@@ -31,6 +31,7 @@ const News = ({ data }) => {
                 screenName="SiRCH_Kucina"
                 // @ts-ignore-next-line
                 width="100%"
+                options={{ height: 900 }}
               />
             </div>
           </div>
