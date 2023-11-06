@@ -54,4 +54,12 @@
     flex-direction: column;
     gap: gutters.$gutter-small;
   }
+
+  .GrantInfo {
+    font-size: 0.8rem;
+    color: colors.$primary-color;
+    display: flex;
+    align-items: center;
+    gap: gutters.$gutter-small;
+  }
 }

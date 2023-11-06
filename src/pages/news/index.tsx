@@ -8,7 +8,6 @@ import styles from '@styles/pages/News.module.scss'
 import { fetchEntries } from '../../contentful';
 import { GetServerSideProps } from 'next';
 import SingleNews from '@components/SingleNews';
-import Link from 'next/link';
 
 const News = ({ data }) => {
   return (

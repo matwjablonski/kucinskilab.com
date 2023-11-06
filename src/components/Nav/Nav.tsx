@@ -25,7 +25,7 @@ const Nav = () => {
           </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link href="/">
+          <Link href="/sonata-project">
             <a>Sonata Project</a>
           </Link>
         </li>

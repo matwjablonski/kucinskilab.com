@@ -15,7 +15,7 @@ const ProjectSectionComponent = ({ title, text, label }: ProjectSectionProps, re
       <div className={styles.ProjectContent}>
         <h2 className={styles.ProjectTitle}>{title}</h2>
         <p className={styles.ProjectDescription}>{text}</p>
-        <Button buttonType="link" to="/" label={label} />
+        <Button buttonType="link" to="/sonata-project" label={label} />
       </div>
     </div>
   </Section>
