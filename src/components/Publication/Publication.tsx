@@ -24,7 +24,7 @@ const Publication = ({ title, magazineLogo, authors, magazineTitle, publicationY
           <h4 className={styles.Title}>{title}</h4>
         </div>
         <div className={styles.Meta}>
-          <div>{magazineTitle}, <strong>{publicationYear}</strong>, {volumeNumber}, {pages}</div>
+          <div>{magazineTitle}, <strong>{publicationYear}</strong>, {volumeNumber && `${volumeNumber},`} {pages}</div>
           <div>
             <strong>DOI:&nbsp;</strong>
             { doiUrl ? <a href={doiUrl} target="_blank" rel="noopenner nofollow noreferrer">{doi}</a> : doi}
