@@ -1,0 +1,55 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+@use '@styles/settings/media';
+
+.Academic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: gutters.$gutter-big;
+
+  @include media.bp(sm) {
+    width: calc(50% - (gutters.$gutter))
+  }
+
+  @include media.bp(lg) {
+    width: calc(33.3333% - (gutters.$gutter));
+  }
+
+  .Photo {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: gutters.$gutter-big;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .Name {
+    margin-bottom: gutters.$gutter;
+    font-weight: 400;
+  }
+
+  .Org {
+    display: flex;
+    align-items: center;
+  }
+
+  .OrgName {
+    color: colors.$text-light;
+  }
+
+  .OrgImage {
+    position: relative;
+    width: 100px;
+    max-width: 200px;
+    height: 70px;
+    margin-right: gutters.$gutter;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

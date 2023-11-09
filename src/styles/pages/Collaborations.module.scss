@@ -1,0 +1,18 @@
+@use '@styles/settings/gutters';
+@use '@styles/settings/colors';
+
+.Collaborations {
+  padding: gutters.$gutter-big;
+
+  .Title {
+    font-size: 2em;
+    line-height: 1.7;
+    margin-bottom: gutters.$gutter-big * 2;
+  }
+
+  .List {
+    display: flex;
+    gap: gutters.$gutter;
+    flex-wrap: wrap;
+  }
+}

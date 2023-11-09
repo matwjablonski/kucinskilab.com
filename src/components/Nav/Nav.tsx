@@ -35,6 +35,11 @@ const Nav = () => {
           </Link>
         </li>
         <li className={styles.NavItem}>
+          <Link href="/collaborations">
+            <a>Collaborations</a>
+          </Link>
+        </li>
+        <li className={styles.NavItem}>
           <Link href="/news">
             <a>News</a>
           </Link>
