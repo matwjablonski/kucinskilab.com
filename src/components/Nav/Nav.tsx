@@ -34,11 +34,11 @@ const Nav = () => {
             <a>Publications</a>
           </Link>
         </li>
-        {/* <li className={styles.NavItem}>
+        <li className={styles.NavItem}>
           <Link href="/collaborations">
             <a>Collaborations</a>
           </Link>
-        </li> */}
+        </li>
         <li className={styles.NavItem}>
           <Link href="/news">
             <a>News</a>
