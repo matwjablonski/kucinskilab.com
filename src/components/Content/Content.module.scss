@@ -33,4 +33,17 @@
       margin-bottom: gutters.$gutter-big;
     }
   }
+
+  .Asset {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    display: block;
+
+    img {
+      object-fit: cover;
+    }
+  }
 }
